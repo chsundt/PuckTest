@@ -9,8 +9,6 @@
 
 <button type="button" id="my_Savedata" > Save Date as CSV - File </button>
 
-<button type="button" id="my_respiratoryrate" > Calculate Respiratory Rate </button>
-
 
 <script src="https://www.puck-js.com/puck.js"></script>
 
@@ -34,8 +32,6 @@ $(document).ready(function () {
 var data = [];
 
 var rec_flag = false;
-  
-var rec_flag2 = false;
 
 var start_time;
 
@@ -46,8 +42,6 @@ var xconnect = document.getElementById("myPuck_connect");
 var savemy_CSV = document.getElementById("my_Savedata");
 
 var rec_startstop = document.getElementById("myrecord_start");
-
-var resp_rate = document.getElementById("my_respiratoryrate");
 
 var taxis_increment = 10 * 1000; /// axis increment in milliseconds
 
@@ -190,25 +184,6 @@ xconnect.textContent = "Disconnect Puck via Bluetooth";
 }); // End Puck.connect ()
 
 }
-  
-function respiratory_rate() {
-  if(rec_flag2) {
-// resp_rate.textContent = detectPeaks().toFixed(3);
-alert(detectPeaks().toFixed(3));
-    
-
-rec_flag2 = false;
-    
-  } else {
-  
-rec_flag2 = true;
-// resp_rate.textContent = detectPeaks().toFixed(3);
-alert(detectPeaks().toFixed(3));
-
-
-  };
-
-}
 
 
 function savemyCSV() {
@@ -272,15 +247,11 @@ xconnect.addEventListener("click", function () { bluetooth_connect() } );
 savemy_CSV.addEventListener("click", function () { savemyCSV() } );
 
 rec_startstop.addEventListener("click", function () { startstop_record() } );
-  
-resp_rate.addEventListener("click", function () { respiratory_rate() } );
 
 });
 
 
 
 </script>
-
 </body>
-
 </html>
