@@ -190,8 +190,20 @@ xconnect.textContent = "Disconnect Puck via Bluetooth";
 }
   
 function respiratory_rate() {
-  // try to display detectPeaks() function on screen
-  resp_rate.textContent = detectPeaks.toFixed(1);
+  if(rec_flag) {
+
+rec_startstop.textContent != "Start New Recording";
+
+rec_flag = false;
+    
+  } else {
+  
+rec_flag = true;
+resp_rate.textContent = detectPeaks().toFixed(1);
+
+
+  };
+
   return;
 }
 
