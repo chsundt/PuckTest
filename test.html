@@ -193,7 +193,7 @@ xconnect.textContent = "Disconnect Puck via Bluetooth";
   
 function respiratory_rate() {
   if(rec_flag2) {
-resp_rate.textContent = detectPeaks().toFixed(3);
+// resp_rate.textContent = detectPeaks().toFixed(3);
 alert(detectPeaks().toFixed(3));
     
 
@@ -202,7 +202,7 @@ rec_flag2 = false;
   } else {
   
 rec_flag2 = true;
-resp_rate.textContent = detectPeaks().toFixed(3);
+// resp_rate.textContent = detectPeaks().toFixed(3);
 alert(detectPeaks().toFixed(3));
 
 
