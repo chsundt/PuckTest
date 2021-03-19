@@ -34,6 +34,8 @@ $(document).ready(function () {
 var data = [];
 
 var rec_flag = false;
+  
+var rec_flag2 = false;
 
 var start_time;
 
@@ -190,15 +192,15 @@ xconnect.textContent = "Disconnect Puck via Bluetooth";
 }
   
 function respiratory_rate() {
-  if(rec_flag) {
+  if(rec_flag2) {
 
 rec_startstop.textContent != "Start New Recording";
 
-rec_flag = false;
+rec_flag2 = false;
     
   } else {
   
-rec_flag = true;
+rec_flag2 = true;
 resp_rate.textContent = detectPeaks().toFixed(3);
 
 
