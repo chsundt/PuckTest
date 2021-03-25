@@ -112,6 +112,8 @@ rec_startstop.textContent = "Start New Recording";
 
 rec_flag = false;
 
+alert(test().join ('\n'));
+
 connection.write("clearInterval(1)\n", function() { });
 
 } else {
@@ -134,7 +136,6 @@ if ((data.length&25)==25)
 rec_flag = true;
 
 rec_startstop.textContent= "Stop Recording";
-
 };
 
 }
