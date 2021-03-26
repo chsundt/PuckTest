@@ -128,7 +128,7 @@ var date_win_min = t.getTime();
 
 var date_win_max = date_win_min + 2*taxis_increment;
 
-if ((data.length&20)==20)
+if ((data.length&25)==25)
   g.updateOptions( { dateWindow : [date_win_min, date_win_max] } );
 
 rec_flag = true;
