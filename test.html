@@ -80,9 +80,8 @@ function onLine(v) {
 if(rec_flag) {
 
 var x = new Date(); // current time
-var acel = Puck.accel();
-var acc2 = acel.acc;
-var y = parseFloat(acc2);
+
+var y = parseFloat(v);
 
 if ( x.getTime() >= date_win_max) {
 
