@@ -22,7 +22,7 @@
 </head>
 
 <body>
-<button onClick="add()">Calculate</button><br>
+<button onClick="add()">Calculate RR</button><br>
 <label for="displayValue">Your respiratory rate is: </label><input type="textbox" name="display">
 <script>
    function add() {
@@ -119,9 +119,10 @@ rec_startstop.textContent = "Start New Recording";
 
 rec_flag = false;
 
-connection.write("clearInterval(1)\n", function() { });
 
 } else {
+   
+connection.write("clearInterval(1)\n", function() { });
 
 data.splice(0,data.length);
 
