@@ -22,13 +22,6 @@
 </head>
 
 <body>
-<button onClick="add()">Calculate RR</button><br>
-<label for="displayValue">Your respiratory rate is: </label><input type="textbox" name="display">
-<script>
-   function add() {
-      document.getElementsByName('display')[0].value= 0;
-   }
-</script>
 
 <div id="div_g" style="width:1200px; height:600px;"></div>
 
@@ -120,7 +113,7 @@ rec_startstop.textContent = "Start New Recording";
 rec_flag = false;
 
 connection.write("clearInterval(1)\n", function() { });
-   
+
 } else {
 
 data.splice(0,data.length);
@@ -136,7 +129,7 @@ var date_win_min = t.getTime();
 var date_win_max = date_win_min + 2*taxis_increment;
 
 if ((data.length&25)==25)
-  g.updateOptions( { dateWindow : [date_win_min, date_win_max] } );
+ g.updateOptions( { dateWindow : [date_win_min, date_win_max] } );
 
 rec_flag = true;
 
@@ -264,4 +257,3 @@ rec_startstop.addEventListener("click", function () { startstop_record() } );
 </body>
 
 </html>
-
